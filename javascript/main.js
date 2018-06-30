@@ -1,24 +1,46 @@
 let i = 0;
-let time = 3000;
+let time = 5000;
 
-let images =  [
-    "./images/hdspace2.jpg","./images/gundam2.jpg", "./images/hdspace4.jpg", "./images/hdspace5.jpg", "./images/gundam1.jpg"
-]
-// images[0] = "./images/gundam1.jpg"
 
-// let rotater = document.getElementsByClassName( 'rotater' ).getAttribute( 'src' );
-// rotater.innerHTML = rotater;
+let rotater = document.querySelector( '.rotater' );
+let images = document.querySelectorAll( '.rotater img');
 
 function changeImg() {
-    document.rotater.src = images[i];
-
     if ( i < images.length - 1 ) {
         i++;
     } else {
         i = 0;
     }
-
+    
+    showImage(i)
+    
     setTimeout( "changeImg()", time );
 }
 
+function showImage( index ) {
+    images.forEach( function( image, index ) {
+        image.className = 'hide animate';
+    });
+    
+    images[index].className = 'active animate';
+}
+
+
+
+
 changeImg();
+
+
+
+
+// var array = [ "one", "two", "three", "four", "five", "six", "seven", "eight" ];
+// console.log(array);
+// array[2] = 10;
+// // array.splice( 2, 1, 10 );
+// console.log(array);
+
+
+
+
+
+
