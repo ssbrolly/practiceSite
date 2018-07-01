@@ -2,7 +2,6 @@ let i = 0;
 let time = 5000;
 
 
-let rotater = document.querySelector( '.rotater' );
 let images = document.querySelectorAll( '.rotater img');
 
 function changeImg() {
@@ -24,10 +23,6 @@ function showImage( index ) {
     
     images[index].className = 'active animate';
 }
-
-
-
-
 changeImg();
 
 
