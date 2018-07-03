@@ -13,7 +13,7 @@ function changeImg() {
     
     showImage(i)
     
-    setTimeout( "changeImg()", time );
+    setTimeout( changeImg, time );
 }
 
 function showImage( index ) {
@@ -28,11 +28,6 @@ changeImg();
 
 
 
-// var array = [ "one", "two", "three", "four", "five", "six", "seven", "eight" ];
-// console.log(array);
-// array[2] = 10;
-// // array.splice( 2, 1, 10 );
-// console.log(array);
 
 
 
